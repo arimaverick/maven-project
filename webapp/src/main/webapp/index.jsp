@@ -1,3 +1,3 @@
-<h1> Hello, Welcome to Simple DevOps Project !!   </h1>
-<h2> Deploying on a VM for Practice  </h2>
-<h2> Glad to see you here </h2>
+<h1> Hello, Welcome to Arindam's DevOps Project !!   </h1>
+<h2> Deploying on a VM for a Nice Demo  </h2>
+<h2> Glad to see you here Lukcy</h2>
