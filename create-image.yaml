@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+  - name: create docker image
+    command: docker build -t devops-simple-image:1.0 .
+    args:
+      chdir: /opt/docker
+
+  - name: tag docker image
+    command: docker tag devops-simple-image:1.0 arimaverick/devops-simple-image:1.0
+
+  - name: push to docker hub
+    command: docker push arimaverick/devops-simple-image:1.0
+
+  - name: remove the image from local
+    command: docker rmi devops-simple-image:1.0 arimaverick/devops-simple-image:1.0
+    ignore_errors: yes
