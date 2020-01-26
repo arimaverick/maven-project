@@ -12,13 +12,16 @@
     ignore_errors: yes
 
   - name: remove images
-    command: docker image rm devops-simple-image:1.0
+    command: docker image rm arimaverick/devops-simple-image:1.0
     ignore_errors: yes
 
-  - name: build docker image from war file
-    command: docker build -t devops-simple-image:1.0 .
-    args:
-      chdir: /opt/docker
+    #- name: build docker image from war file
+    #command: docker build -t devops-simple-image:1.0 .
+    #args:
+    #  chdir: /opt/docker
+
+  - name: pull docker image from dockerhub
+    command: docker pull arimaverick/devops-simple-image:1.0
 
   - name: build container out of this image
     command: docker run -d --name docker-container -p 8080:8080 devops-simple-image:1.0
