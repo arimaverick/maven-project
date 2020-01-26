@@ -24,4 +24,4 @@
     command: docker pull arimaverick/devops-simple-image:1.0
 
   - name: build container out of this image
-    command: docker run -d --name docker-container -p 8080:8080 devops-simple-image:1.0
+    command: docker run -d --name docker-container -p 8080:8080 arimaverick/devops-simple-image:1.0
